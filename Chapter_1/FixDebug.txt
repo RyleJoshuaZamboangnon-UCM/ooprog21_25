@@ -1,0 +1,18 @@
+public class FixDebug_One
+{
+   /* This program displays a greeting */
+   public static void main(String[] args)   
+   {
+      System.out.println("Hello World!");
+   }
+}
+
+/*
+Mistakes:
+1. Class name had a space → FixDebug One → should be FixDebug_One.
+2. Method name was Main → should be lowercase main.
+3. Parameter was String args → should be String[] args.
+4. Typo: Systm → should be System.
+5. Missing semicolon after println statement.
+6. Missing closing brace for the class.
+*/
