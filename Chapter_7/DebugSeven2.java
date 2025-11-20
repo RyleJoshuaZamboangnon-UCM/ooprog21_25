@@ -1,6 +1,3 @@
-
-
-
 // Program prompts user to enter a series of integers
 // separated by spaces
 // Program converts them to numbers and sums them
@@ -20,23 +17,23 @@ public class DebugSeven2
       Scanner in = new Scanner(System.in);
       System.out.print("Enter a series of integers separated by spaces >> ");
       str = in.nextLine();
-      length = str.length();
-      for(x = 0; x < length; ++x)
+      length = str.length();          // FIXED: str.len() → str.length()
+      for(x = 0; x < length; ++x)     // FIXED: len → length
       {
          if(str.charAt(x) == ' ')
          {
-            partStr = str.substring(lastSpace + 1, x);
-            num = Integer.parseInt(partStr);
-            System.out.println(" " + num);
-            sum += num;
-            lastSpace = x;
-         }
+             partStr = str.substring(lastSpace + 1, x);     
+             num = Integer.parseInt(partStr);
+             System.out.println("                " + num);
+             sum += num;
+             lastSpace = x;
+          } 
       }
       partStr = str.substring(lastSpace + 1, length);
       num = Integer.parseInt(partStr);
-      System.out.println(" " + num);
-      sum += num;  
-      System.out.println(" -------------------" +
+      System.out.println("                " + num);
+      sum += num;                     // FIXED: sum = num → sum += num
+      System.out.println("         -------------------" +
          "\nThe sum of the integers is " + sum);
    }
 }
